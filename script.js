@@ -22,6 +22,11 @@ function updateSkor(){
     skor.textContent = count;
 }
 
+function oriText(){
+    player.textContent = "?";
+    computer.textContent = "?";
+}
+
 gunting.addEventListener("click", function(){
     player.textContent = "✌️"
     player.style.fontSize = "90px"
@@ -32,6 +37,7 @@ gunting.addEventListener("click", function(){
     if (count >= 5){
         count = 0;
         openModal();
+        oriText();
         tulisan.innerHTML = "Ayoo menangkan 5 suit untuk <br> memenangkan permainan ini!"
     }
     updateSkor();
@@ -46,6 +52,7 @@ batu.addEventListener("click", function(){
     if (count >= 5){
         count = 0;
         openModal();
+        oriText();
         tulisan.innerHTML = "Ayoo menangkan 5 suit untuk <br> memenangkan permainan ini!"
     }
     updateSkor();
@@ -60,6 +67,7 @@ kertas.addEventListener("click", function(){
     if (count >= 5){
         count = 0;
         openModal();
+        oriText();
         tulisan.innerHTML = "Ayoo menangkan 5 suit untuk <br> memenangkan permainan ini!"
     }
     updateSkor();
